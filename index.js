@@ -37,7 +37,12 @@ app.get("/users", (req, res) => {
     {
       id: 2,
       name: "John"
+    },
+    {
+      id: 3,
+      name: "Sai"
     }
+
   ]);
 });
 // POST route
@@ -55,6 +60,10 @@ app.get("/admins", (req, res) => {
     {
       id: 1,
       name: "Ajay"
+    },
+    {
+      id: 2,
+      name: "Sai"
     }
   ]);
 });
