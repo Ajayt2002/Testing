@@ -9,7 +9,7 @@ app.use(express.json());
 let users = [
   { id: 11, name: "Vamsi" },
   { id: 12, name: "Teja" },
-  { id: 13, name: "Teja1" }
+  { id: 13, name: "Rohith" }
 ];
 
 
