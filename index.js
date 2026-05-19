@@ -8,7 +8,8 @@ app.use(express.json());
 // Dummy users data
 let users = [
   { id: 11, name: "Vamsi" },
-  { id: 12, name: "Teja" }
+  { id: 12, name: "Teja" },
+  { id: 13, name: "Teja1" }
 ];
 
 
