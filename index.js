@@ -50,7 +50,15 @@ app.post("/admin", (req, res) => {
     user: data
   });
 });
-
+// GET endpoint
+app.get("/admins", (req, res) => {
+  res.json([
+    {
+      id: 1,
+      name: "Ajay"
+    }
+  ]);
+});
 
 // Start server
 app.listen(PORT, () => {
