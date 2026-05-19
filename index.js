@@ -9,7 +9,12 @@ app.use(express.json());
 let users = [
   { id: 11, name: "Vamsi" },
   { id: 12, name: "Teja" },
+<<<<<<< HEAD
   { id: 13, name: "Rohith" }
+=======
+  { id: 13, name: "Teja1" },
+  { id: 14, name: "Teja2" }
+>>>>>>> 12de427 (new user added to list@v1)
 ];
 
 
