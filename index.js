@@ -54,6 +54,22 @@ app.put("/users/:id", (req, res) => {
     user
   });
 });
+// DELETE user
+app.delete("/users/:id", (req, res) => {
+  const id = parseInt(req.params.id);
+
+  users = users.filter((u) => u.id !== id);
+
+  res.json({
+    message: "User deleted successfully",
+    users
+  });
+});
+
+// Start server
+app.listen(PORT, () => {
+  console.log(`Server running on http://localhost:${PORT}`);
+});
 // GET endpoint
 app.get("/users", (req, res) => {
   res.json([
