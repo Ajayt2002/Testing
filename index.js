@@ -28,6 +28,15 @@ app.post("/user", (req, res) => {
     user: data
   });
 });
+// POST route
+app.post("/admin", (req, res) => {
+  const data = req.body;
+
+  res.json({
+    message: "User received",
+    user: data
+  });
+});
 
 // Start server
 app.listen(PORT, () => {
