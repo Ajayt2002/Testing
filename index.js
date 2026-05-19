@@ -28,15 +28,29 @@ app.post("/user", (req, res) => {
     user: data
   });
 });
+// GET endpoint
+app.get("/users", (req, res) => {
+  res.json([
+    {
+      id: 1,
+      name: "Ajay"
+    },
+    {
+      id: 2,
+      name: "John"
+    }
+  ]);
+});
 // POST route
 app.post("/admin", (req, res) => {
   const data = req.body;
 
   res.json({
-    message: "User received",
+    message: "Admin received",
     user: data
   });
 });
+
 
 // Start server
 app.listen(PORT, () => {
