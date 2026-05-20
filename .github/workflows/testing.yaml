@@ -1,0 +1,8 @@
+name: Learning github action 
+on: [push]
+jobs:
+    testing:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/chekout@v6
+            - run: echo "Hi there"
