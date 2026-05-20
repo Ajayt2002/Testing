@@ -1,18 +1,10 @@
 const express = require("express");
 
 const app = express();
+const PORT = 3000;
 
 // Middleware
 app.use(express.json());
-
-// Dummy users data
-let users = [
-  { id: 11, name: "Vamsi" },
-  { id: 12, name: "Teja" },
-  { id: 13, name: "Teja1" },
-  { id: 14, name: "Teja2" }
-];
-
 
 // Home route
 app.get("/", (req, res) => {
@@ -36,42 +28,6 @@ app.post("/user", (req, res) => {
     user: data
   });
 });
-// PUT user
-app.put("/users/:id", (req, res) => {
-  const id = parseInt(req.params.id);
-  const updatedName = req.body.name;
-
-  const user = users.find((u) => u.id === id);
-
-  if (!user) {
-    return res.status(404).json({
-      message: "User not found"
-    });
-  }
-
-  user.name = updatedName;
-
-  res.json({
-    message: "User updated successfully",
-    user
-  });
-});
-// DELETE user
-app.delete("/users/:id", (req, res) => {
-  const id = parseInt(req.params.id);
-
-  users = users.filter((u) => u.id !== id);
-
-  res.json({
-    message: "User deleted successfully",
-    users
-  });
-});
-
-// Start server
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
-});
 // GET endpoint
 app.get("/users", (req, res) => {
   res.json([
@@ -82,12 +38,7 @@ app.get("/users", (req, res) => {
     {
       id: 2,
       name: "John"
-    },
-    {
-      id: 3,
-      name: "Sai"
     }
-
   ]);
 });
 // POST route
@@ -105,15 +56,11 @@ app.get("/admins", (req, res) => {
     {
       id: 1,
       name: "Ajay"
-    },
-    {
-      id: 2,
-      name: "Sai"
     }
   ]);
 });
 
 // Start server
 app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${process.env.PORT }`);
+  console.log(`Server running on http://localhost:${PORT}`);
 });
