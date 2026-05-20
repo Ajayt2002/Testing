@@ -37,7 +37,7 @@ app.get("/users", (req, res) => {
     },
     {
       id: 2,
-      name: "John"
+      name: "Sai"
     }
   ]);
 });
@@ -56,6 +56,9 @@ app.get("/admins", (req, res) => {
     {
       id: 1,
       name: "Ajay"
+    }{
+	    id: 2,
+		    name: "Sai"
     }
   ]);
 });
